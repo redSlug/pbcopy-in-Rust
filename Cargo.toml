@@ -1,0 +1,18 @@
+[package]
+name = "pbcopy"
+version = "0.1.0"
+authors = ["Bradley Dettmer <11279144+redSlug@users.noreply.github.com>"]
+
+[dependencies]
+clap = "2.26.0"
+
+[target.'cfg(windows)'.dependencies]
+clipboard-win = "2.1"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc = "0.2"
+objc_id = "0.1"
+objc-foundation = "0.1"
+
+[target.'cfg(all(unix, not(any(target_os="macos", target_os="android"))))'.dependencies]
+x11-clipboard = "0.2"
