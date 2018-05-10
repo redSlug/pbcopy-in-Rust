@@ -5,6 +5,7 @@ authors = ["Bradley Dettmer <11279144+redSlug@users.noreply.github.com>"]
 
 [dependencies]
 clap = "2.26.0"
+cfg-if = "0.1.3"
 
 [target.'cfg(windows)'.dependencies]
 clipboard-win = "2.1"
